@@ -12,7 +12,7 @@ services:
     volumes:
         # take care that the mount location "/mnt/influxdb" becomes overwritten
         # by the mount location specified in the influxdb Dockerfile.
-        - 'influxdb-data:/mnt/influxdb'   
+        - 'influxdb-data:/mnt/influxdb'
     ports:
       # The API for InfluxDB is served on port 8086
       - "8082:8082"
@@ -32,10 +32,10 @@ services:
       - influxdb
     restart: always
     environment:
-       - interval=60s
+       - interval=1s
        - flush_interval=60s
   grafana:
-    build: grafana 
+    build: grafana
     ports:
        - "3000:3000"
     depends_on:
@@ -77,4 +77,3 @@ services:
        - "80:80"
        - "443:443"
     restart: always
-
