@@ -1,5 +1,5 @@
 
-FROM arm32v7:latest
+FROM ubuntu:latest
 RUN apt update && apt upgrade && apt -y install wget unzip libusb-1.0-0
 
 ARG virtualhubversion=34369
