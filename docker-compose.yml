@@ -32,7 +32,7 @@ services:
       - influxdb
     restart: always
     environment:
-       - interval=1s
+       - interval=60s
        - flush_interval=60s
   grafana:
     build: grafana
