@@ -1,5 +1,5 @@
 
-FROM ubuntu:latest
+FROM raspian:latest
 RUN apt update && apt upgrade && apt -y install wget unzip libusb-1.0-0
 
 ARG virtualhubversion=34369
