@@ -10,4 +10,4 @@ then
   docker build --build-arg virtualhubversion=${hubversion} -t ${image_and_tag} Dockerfile
 fi
 
-docker run -d --name virtualhub -p 4444:4444 --privileged -v /dev/bus/usb:/dev/bus/usb -u 997 --restart=always ${image_and_tag} /usr/sbin/VirtualHub
+docker run -d --name virtualhub -p 4444:4444 --privileged -v /dev/bus/usb:/dev/bus/usb -u 997 --restart=always ${image_and_tag} /usr/src/yocto/${virtualhub}/armhf/VirtualHub
