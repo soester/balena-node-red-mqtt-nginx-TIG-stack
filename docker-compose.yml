@@ -67,18 +67,26 @@ services:
     depends_on:
         - mqtt-test
     restart: always
+  yoctopuce:
+    build: yoctopuce
+    ports:
+      - "4444:4444"
   nginx:
     build : nginx
     depends_on:
       - grafana
       - node-red
       - node-red-test
+      - yoctopuce
     ports:
        - "80:80"
        - "443:443"
     restart: always
+<<<<<<< HEAD
   yoctopuce:
     build: yoctopuce
     privileged: true
     ports:
       - "4444:4444"
+=======
+>>>>>>> 35a7609c7829c836c9e1e189f485afa8130c60c7
