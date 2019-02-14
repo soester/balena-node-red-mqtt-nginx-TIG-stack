@@ -79,5 +79,6 @@ services:
     restart: always
   yoctopuce:
     build: yoctopuce
+    privileged: true
     ports:
       - "4444:4444"
