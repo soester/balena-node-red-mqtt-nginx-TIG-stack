@@ -17,4 +17,4 @@ RUN	cp /usr/src/yocto/armhf/VirtualHub /usr/sbin/ && \
 RUN groupadd virtualhub --gid 1012 && \
 useradd -g virtualhub -r -s /sbin/nologin --uid 997 virtualhub
 
-CMD /usr/sbin/VirtualHub
+CMD /usr/sbin/VirtualHub -i
