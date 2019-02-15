@@ -3,7 +3,7 @@ FROM nodered/node-red-docker:rpi-v8
 # installing an editor
 USER root
 RUN apt-get update && apt-get install nano sense-hat python3-pip
-RUN pip-3.4 install pillow
+RUN pip install pillow
 
 USER node-red
 RUN npm install node-red-contrib-resinio
