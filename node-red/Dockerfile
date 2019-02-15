@@ -12,3 +12,6 @@ RUN npm install node-red-contrib-yoctopuce
 RUN npm install node-red-node-pi-sense-hat
 
 COPY ./settings.js /data/settings.js
+
+# Copy pre defined flow to container???
+#COPY ./flow.json /data/projects/rpi-log01/flow.json
