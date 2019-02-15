@@ -2,7 +2,7 @@
 FROM balenalib/raspberrypi3-debian:latest
 RUN apt update && apt upgrade && apt -y install wget unzip libusb-1.0-0 portmap
 ENV UDEV=1
-ARG virtualhubversion=34369
+ARG virtualhubversion=34403
 
 RUN mkdir -p /usr/src/yocto
 
