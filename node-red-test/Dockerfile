@@ -2,9 +2,7 @@ FROM nodered/node-red-docker:rpi-v8
 
 # installing an editor
 USER root
-RUN apt-get update && apt-get install nano sense-hat python3 python3-sense-hat
-#RUN apt-get update
-#RUN pip-3.2 install --no-cache-dir pillow
+RUN apt-get update && apt-get install nano python3 python3-sense-hat sense-hat
 
 USER node-red
 RUN npm install node-red-contrib-resinio
