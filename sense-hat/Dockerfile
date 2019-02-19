@@ -9,6 +9,6 @@ RUN apt-get update && apt-get install -yq \
   apt-get clean && rm -rf /var/lib/apt/lists/*
 
 COPY ./command.py /data/sense-hat/command.py
-WORKDIR /data/sense-hat
+WORKDIR /data/sense-hat/
 
 CMD ["python3", "command.py"]
