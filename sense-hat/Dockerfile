@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -yq \
   python3-sense-hat \
   wget && \
   apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN pip install yoctopuce
 
 COPY ./command.py /data/sense-hat/command.py
 WORKDIR /data/sense-hat/
