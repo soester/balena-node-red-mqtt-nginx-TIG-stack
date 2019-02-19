@@ -84,3 +84,7 @@ services:
     restart: always
     ports:
       - "4444:4444"
+  sense-hat:
+    build: sense-hat
+    privileged: true
+    restart: always

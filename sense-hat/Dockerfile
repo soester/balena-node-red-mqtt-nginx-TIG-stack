@@ -1,0 +1,14 @@
+FROM resin/raspberrypi3-debian:latest
+
+ENV INITSYSTEM on
+
+RUN apt-get update && apt-get install -yq \
+  python3 \
+  python3-sense-hat \
+  wget && \
+  apt-get clean && rm -rf /var/lib/apt/lists/*
+
+COPY .command.py /data/sense-hat/command.py
+WORKDIR /data/sense-hat
+
+CMD ["python3", "command.py"]
