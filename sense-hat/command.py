@@ -1,6 +1,6 @@
 from sense_hat import SenseHat, ACTION_PRESSED, ACTION_HELD, ACTION_RELEASED
 from signal import pause
-from yoctopuce.yocto_api import *
+#from yoctopuce.yocto_api import *
 import time
 import os
 import socket
@@ -105,12 +105,12 @@ g, g, g, g, e, e, e, i,
 #        sense.clear()
 
 #yoctopuce status
-def pushed_up(event):
-    if event.action != ACTION_RELEASED:
-        def RegisterHub(http://yoctopuce:4444, errmsg)
-            sense.show_message(YSensor.FirstSensor(), scroll_speed=0.06
-            time.sleep(3)
-            sense.clear()
+#def pushed_up(event):
+#    if event.action != ACTION_RELEASED:
+#        def RegisterHub(http://yoctopuce:4444, errmsg)
+#            sense.show_message(YSensor.FirstSensor(), scroll_speed=0.06
+#            time.sleep(3)
+#            sense.clear()
 #           sense.show_message(YSensor.NextSensor(), scroll_speed=0.06
 #           time.sleep(3)
 #           sense.clear()
@@ -162,7 +162,7 @@ while time.time() < t_end:
         sense.set_pixels(image)
         time.sleep(0.2)
 sense.clear()
-sense.stick.direction_up = pushed_up
+#sense.stick.direction_up = pushed_up
 sense.stick.direction_down = pushed_down
 sense.stick.direction_left = pushed_left
 sense.stick.direction_right = pushed_right
