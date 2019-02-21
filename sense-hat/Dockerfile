@@ -8,7 +8,6 @@ RUN apt-get update && apt-get install -yq \
   python3-pip \
   wget && \
   apt-get clean && rm -rf /var/lib/apt/lists/*
-RUN pip install balena-sdk
 RUN pip3 install yoctopuce
 
 
