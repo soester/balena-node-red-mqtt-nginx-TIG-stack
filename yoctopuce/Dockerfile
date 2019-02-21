@@ -17,6 +17,7 @@ RUN cp /usr/src/yocto/udev_conf/51-yoctopuce_all.rules /etc/udev/rules.d
 
 # 1: copy VitualHub binary to /usr/sbin
 RUN	cp /usr/src/yocto/armhf/VirtualHub /usr/sbin/
+RUN cp /usr/src/yocto/startup_script/yVirtualHub /etc/init.d/
 
 # 2: ensure that the /usr/sbin/Virtualhub is executable with :
 RUN chmod +x /usr/sbin/VirtualHub
