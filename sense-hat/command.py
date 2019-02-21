@@ -62,36 +62,36 @@ e, e, b, b, b, e, e, e,
 ]
 
 geopoppy = [
-e, e, r, r, r, e, e, e,
-e, r, r, r, r, r, e, e,
-e, r, r, r, r, r, e, e,
-e, e, r, v, r, e, e, e,
-e, e, e, g, e, e, e, e,
-e, e, e, g, e, e, e, e,
-e, e, e, g, e, e, e, e,
-e, e, e, g, e, i, e, e,
+e, e, e, e, e, e, e, e,
+e, e, e, e, e, e, e, e,
+e, e, e, e, e, e, e, e,
+e, e, e, e, e, e, e, e,,
+g, g, g, g, e, e, e, e,
+g, g, g, g, e, e, e, e,
+g, g, g, g, e, e, e, e,
+g, g, g, g, e, i, e, e,
 ]
 
 geopoppy1 = [
-e, e, r, r, r, e, e, e,
-e, r, r, r, r, r, e, e,
-e, r, r, r, r, r, e, e,
-e, e, r, v, r, e, e, e,
-e, e, e, g, e, e, e, e,
-e, e, e, g, e, e, e, e,
-e, e, e, g, e, e, e, e,
-e, e, e, g, e, e, i, e,
+e, e, e, e, e, e, e, e,
+e, e, e, e, e, e, e, e,
+e, e, e, e, e, e, e, e,
+e, e, e, e, e, e, e, e,,
+g, g, g, g, e, e, e, e,
+g, g, g, g, e, e, e, e,
+g, g, g, g, e, e, e, e,
+g, g, g, g, e, e, i, e,
 ]
 
 geopoppy2 = [
-e, e, r, r, r, e, e, e,
-e, r, r, r, r, r, e, e,
-e, r, r, r, r, r, e, e,
-e, e, r, v, r, e, e, e,
-e, e, e, g, e, e, e, e,
-e, e, e, g, e, e, e, e,
-e, e, e, g, e, e, e, e,
-e, e, e, g, e, e, e, i,
+e, e, e, e, e, e, e, e,
+e, e, e, e, e, e, e, e,
+e, e, e, e, e, e, e, e,
+e, e, e, e, e, e, e, e,,
+g, g, g, g, e, e, e, e,
+g, g, g, g, e, e, e, e,
+g, g, g, g, e, e, e, e,
+g, g, g, g, e, e, e, i,
 ]
 
 #docker-compose up -d
@@ -159,7 +159,7 @@ while time.time() < t_end:
         sense.set_pixels(image)
         time.sleep(0.2)
 sense.clear()
-sense.stick.direction_up = pushed_up
+#sense.stick.direction_up = pushed_up
 sense.stick.direction_down = pushed_down
 sense.stick.direction_left = pushed_left
 sense.stick.direction_right = pushed_right
