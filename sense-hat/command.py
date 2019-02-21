@@ -1,6 +1,6 @@
 from sense_hat import SenseHat, ACTION_PRESSED, ACTION_HELD, ACTION_RELEASED
 from signal import pause
-from yoctopuce.yocto_api import *
+#from yoctopuce.yocto_api import *
 import time
 import os
 import socket
@@ -103,14 +103,14 @@ e, e, e, g, e, e, e, i,
 #        sense.clear()
 
 # yoctopuce status
-def pushed_up(event):
-    if event.action != ACTION_RELEASED:
-        sense.show_message(YSensor.FirstSensor(), scroll_speed=0.06
-        time.sleep(3)
-		sense.clear()
-        sense.show_message(YSensor.NextSensor(), scroll_speed=0.06
-        time.sleep(3)
-		sense.clear()
+#def pushed_up(event):
+#    if event.action != ACTION_RELEASED:
+#        sense.show_message(YSensor.FirstSensor(), scroll_speed=0.06
+#        time.sleep(3)
+#		sense.clear()
+#        sense.show_message(YSensor.NextSensor(), scroll_speed=0.06
+#        time.sleep(3)
+#		sense.clear()
 
 # Shutdown
 def pushed_down(event):
