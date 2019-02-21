@@ -88,4 +88,3 @@ services:
   sense-hat:
     build: sense-hat
     privileged: true
-    restart: always
