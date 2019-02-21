@@ -2,7 +2,6 @@
 FROM balenalib/raspberrypi3-debian:latest
 RUN apt update && apt upgrade && apt -y install wget unzip libusb-1.0-0 portmap
 ENV UDEV=1
-ENV INITSYSTEM on
 ARG virtualhubversion=34403
 
 RUN mkdir -p /usr/src/yocto
@@ -17,13 +16,11 @@ RUN cp /usr/src/yocto/udev_conf/51-yoctopuce_all.rules /etc/udev/rules.d
 
 # 1: copy VitualHub binary to /usr/sbin
 RUN	cp /usr/src/yocto/armhf/VirtualHub /usr/sbin/
-RUN cp /usr/src/yocto/startup_script/yVirtualHub.service /etc/vhub.byn
 
 # 2: ensure that the /usr/sbin/Virtualhub is executable with :
 RUN chmod +x /usr/sbin/VirtualHub
-RUN chmod +x /etc/vhub.byn
 
-CMD /etc/vhub.byn
+CMD /usr/sbin/VirtualHub
 #3: copy the systemd startup script /etc/systemd/system/
 #RUN cp /usr/src/yocto/startup_script/yvirtualhub.service /etc/systemd/system/
 
