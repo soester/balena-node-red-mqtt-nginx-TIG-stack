@@ -81,7 +81,7 @@ services:
   yoctopuce:
     build: yoctopuce
     privileged: true
-    restart: always
+    restart: on-failure:5
     ports:
       - "4444:4444"
       - "4445:4445"
