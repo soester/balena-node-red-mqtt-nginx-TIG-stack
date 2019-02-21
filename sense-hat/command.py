@@ -107,10 +107,10 @@ e, e, e, g, e, e, e, i,
 #    if event.action != ACTION_RELEASED:
 #        sense.show_message(YSensor.FirstSensor(), scroll_speed=0.06
 #        time.sleep(3)
-#		sense.clear()
+#        sense.clear()
 #        sense.show_message(YSensor.NextSensor(), scroll_speed=0.06
 #        time.sleep(3)
-#		sense.clear()
+#        sense.clear()
 
 # Shutdown
 def pushed_down(event):
@@ -123,7 +123,7 @@ def pushed_down(event):
 def pushed_right(event):
     if event.action != ACTION_RELEASED:
         sense.set_pixels(reboot)
-		os.system("sudo reboot")
+        os.system("sudo reboot")
 
 #Get ip
 def getNetworkIp():
@@ -148,9 +148,9 @@ def pushed_left(event):
 #Memo
 def pushed_push(event):
     if event.action != ACTION_PRESSED:
-		sense.set_pixels(question_mark)
-		time.sleep(2)
-		sense.clear()
+        sense.set_pixels(question_mark)
+        time.sleep(2)
+        sense.clear()
 
 animation = [geopoppy, geopoppy1, geopoppy2]
 t_end = time.time() + 60
