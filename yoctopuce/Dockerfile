@@ -17,12 +17,13 @@ RUN cp /usr/src/yocto/udev_conf/51-yoctopuce_all.rules /etc/udev/rules.d
 
 # 1: copy VitualHub binary to /usr/sbin
 RUN	cp /usr/src/yocto/armhf/VirtualHub /usr/sbin/
-RUN cp /usr/src/yocto/startup_script/yVirtualHub /etc/init.d/
+RUN cp /usr/src/yocto/startup_script/yVirtualHub.service /etc/vhub.byn
 
 # 2: ensure that the /usr/sbin/Virtualhub is executable with :
 RUN chmod +x /usr/sbin/VirtualHub
+RUN chmod +x /etc/vhub.byn
 
-CMD /usr/src/yocto/armhf/VirtualHub
+CMD /etc/vhub.byn
 #3: copy the systemd startup script /etc/systemd/system/
 #RUN cp /usr/src/yocto/startup_script/yvirtualhub.service /etc/systemd/system/
 
