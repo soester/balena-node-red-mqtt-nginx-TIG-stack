@@ -122,7 +122,7 @@ def pushed_down(event):
 # Reboot
 def pushed_right(event):
     if event.action != ACTION_RELEASED:
-		sense.set_pixels(reboot)
+        sense.set_pixels(reboot)
 		os.system("sudo reboot")
 
 #Get ip
