@@ -40,8 +40,8 @@ RUN chmod +x /usr/sbin/VirtualHub
 RUN cp /usr/src/yocto/startup_script/yVirtualHub /etc/init.d/
 RUN chmod +x /etc/init.d/yVirtualHub
 
-RUN update-rc.d yVirtualHub defaults
+CMD update-rc.d yVirtualHub defaults
 #RUN update-rc.d yVirtualHub disable
 
-CMD /etc/init.d/yVirtualHub
+#CMD /etc/init.d/yVirtualHub start
 #CMD /usr/sbin/VirtualHub
