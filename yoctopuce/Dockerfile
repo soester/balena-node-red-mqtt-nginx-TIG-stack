@@ -39,7 +39,7 @@ RUN chmod +x /etc/systemd/system/yvirtualhub.service
 #CMD systemctl enable yvirtualhub.service
 COPY start.sh /start.sh
 RUN chmod +x /start.sh
-CMD /start.sh
+RUN /start.sh
 
 ###RUN cp /usr/src/yocto/startup_script/yVirtualHub /etc/init.d/
 ###RUN chmod +x /etc/init.d/yVirtualHub
