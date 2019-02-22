@@ -29,14 +29,15 @@ RUN cp /usr/src/yocto/startup_script/yvirtualhub.service /etc/systemd/system/
 RUN chmod +x /etc/systemd/system/yvirtualhub.service
 
 # 5: reload your systemd configuration with
-RUN systemctl daemon-reload
+#RUN systemctl daemon-reload
 
 # 6: ensure that you can start your script with
-RUN systemctl start yvirtualhub.service
+#RUN systemctl start yvirtualhub.service
 
 
 # 7: set this service to be started at boot time with
-CMD systemctl enable yvirtualhub.service
+#CMD systemctl enable yvirtualhub.service
+CMD ./start.sh
 
 ###RUN cp /usr/src/yocto/startup_script/yVirtualHub /etc/init.d/
 ###RUN chmod +x /etc/init.d/yVirtualHub
