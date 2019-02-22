@@ -31,7 +31,7 @@ RUN chmod +x /etc/systemd/system/yvirtualhub.service
 #RUN systemctl daemon-reload
 
 # 6: ensure that you can start your script with
-#CMD systemctl start yvirtualhub.service
+CMD systemctl start yvirtualhub.service
 
 
 # 7: set this service to be started at boot time with
