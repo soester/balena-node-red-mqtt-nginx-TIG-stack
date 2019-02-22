@@ -65,7 +65,6 @@ RUN cp /usr/src/yocto/udev_conf/51-yoctopuce_all.rules /etc/udev/rules.d
 # users
 # RUN groupadd virtualhub --gid 1012 && \ useradd -g virtualhub -r -s /sbin/nologin --uid 997 virtualhub
 
-RUN mk /usr/sbin/
 
 # 1: copy VitualHub binary to /usr/sbin
 RUN	cp /usr/src/yocto/armhf/VirtualHub /usr/sbin/
