@@ -50,7 +50,8 @@
 FROM balenalib/raspberrypi3-alpine:latest
 RUN apk update
 RUN apk upgrade
-RUN apk --no-cache add wget unzip libusb udev openrc
+RUN apk add wget unzip libusb udev
+RUN apk add openrc --no-cache
 ENV UDEV=1
 ARG virtualhubversion=34403
 
