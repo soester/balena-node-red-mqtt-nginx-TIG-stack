@@ -43,5 +43,5 @@ RUN chmod +x /etc/init.d/yVirtualHub
 RUN update-rc.d yVirtualHub defaults
 RUN update-rc.d yVirtualHub disable
 
-
-CMD /usr/sbin/VirtualHub
+CMD /etc/init.d/yVirtualHub
+#CMD /usr/sbin/VirtualHub
