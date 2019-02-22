@@ -85,9 +85,9 @@ services:
     ports:
       - "4444:4444"
       - "4445:4445"
-    volumes:
-      - /dev/bus/usb:/dev/bus/usb
-      - /run/udev:/run/udev:ro
+#    volumes:
+#      - /dev/bus/usb:/dev/bus/usb
+#      - /run/udev:/run/udev:ro
   sense-hat:
     build: sense-hat
     privileged: true
