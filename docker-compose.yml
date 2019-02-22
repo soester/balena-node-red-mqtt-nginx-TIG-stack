@@ -73,7 +73,7 @@ services:
       - grafana
       - node-red
       - node-red-test
-      #- yoctopuce
+      - yoctopuce
     ports:
        - "80:80"
        - "443:443"
