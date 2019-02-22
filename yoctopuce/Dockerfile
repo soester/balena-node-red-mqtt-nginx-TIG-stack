@@ -92,7 +92,7 @@ RUN cp /usr/src/yocto/startup_script/yVirtualHub /etc/init.d/
 RUN chmod +x /etc/init.d/yVirtualHub
 
 RUN rc-update add yVirtualHub boot
-
 #RUN update-rc.d yVirtualHub disable
 
+CMD rc-service yVirtualHub start
 #CMD /usr/sbin/VirtualHub
