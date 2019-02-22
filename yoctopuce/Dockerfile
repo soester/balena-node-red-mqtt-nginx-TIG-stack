@@ -95,5 +95,4 @@ RUN rc-update add yVirtualHub boot
 
 #RUN update-rc.d yVirtualHub disable
 
-#CMD /etc/init.d/yVirtualHub start
-CMD /usr/sbin/VirtualHub
+#CMD /usr/sbin/VirtualHub
