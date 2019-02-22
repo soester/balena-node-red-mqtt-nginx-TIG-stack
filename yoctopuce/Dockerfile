@@ -53,6 +53,7 @@ RUN apk upgrade
 RUN apk add wget unzip libusb udev
 RUN apk add openrc --no-cache
 ENV UDEV=1
+ENV INITSYSTEM=on
 ARG virtualhubversion=34403
 
 RUN mkdir -p /usr/src/yocto
