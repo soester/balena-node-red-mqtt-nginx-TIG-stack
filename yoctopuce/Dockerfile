@@ -49,6 +49,7 @@
 
 FROM balenalib/raspberrypi3-alpine:latest
 RUN apk update
+RUN apk upgrade
 RUN apk add wget unzip libusb udev openrc
 ENV UDEV=1
 ARG virtualhubversion=34403
@@ -89,9 +90,9 @@ RUN chmod +x /usr/sbin/VirtualHub
 RUN cp /usr/src/yocto/startup_script/yVirtualHub /etc/init.d/
 RUN chmod +x /etc/init.d/yVirtualHub
 
-RUN update-rc add yVirtualHub boot
+#RUN update-rc add yVirtualHub boot
 
 #RUN update-rc.d yVirtualHub disable
 
 #CMD /etc/init.d/yVirtualHub start
-CMD /etc/init.d/yVirtualHub start
+CMD /usr/sbin/VirtualHub
