@@ -37,8 +37,8 @@ RUN chmod +x /etc/systemd/system/yvirtualhub.service
 
 # 7: set this service to be started at boot time with
 #CMD systemctl enable yvirtualhub.service
-COPY start.sh /data/yoctopuce/start.sh
-CMD /data/yoctopuce/start.sh
+COPY start.sh /etc/yoctopuce/start.sh
+CMD /etc/yoctopuce/start.sh
 
 ###RUN cp /usr/src/yocto/startup_script/yVirtualHub /etc/init.d/
 ###RUN chmod +x /etc/init.d/yVirtualHub
