@@ -41,6 +41,9 @@ COPY ./start.sh /start.sh
 RUN chmod +x /start.sh
 CMD /start.sh
 
+### https://github.com/phusion/baseimage-docker#inspecting
+
+
 ###RUN cp /usr/src/yocto/startup_script/yVirtualHub /etc/init.d/
 ###RUN chmod +x /etc/init.d/yVirtualHub
 ###
