@@ -1,6 +1,5 @@
 [Unit]
 Description=Yoctopuce VirtualHub
-After=network.target
 
 [Service]
 EnvironmentFile=/etc/docker.env
