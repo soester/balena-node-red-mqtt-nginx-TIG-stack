@@ -41,6 +41,8 @@ RUN chmod +x /usr/sbin/VirtualHub
 #RUN chmod +x /start.sh
 #CMD /start.sh
 
+ENV DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket
+
 COPY yvirtualhub.service /lib/systemd/system/
 RUN chmod +x /lib/systemd/system/yvirtualhub.service
 RUN systemctl enable yvirtualhub
