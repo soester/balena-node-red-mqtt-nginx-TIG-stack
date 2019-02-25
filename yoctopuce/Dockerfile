@@ -42,7 +42,7 @@ RUN chmod +x /usr/sbin/VirtualHub
 #CMD /start.sh
 
 COPY yvirtualhub.service /lib/systemd/system/
-RUN chmod +x /etc/systemd/system/yvirtualhub.service
+RUN chmod +x /lib/systemd/system/yvirtualhub.service
 RUN systemctl enable yvirtualhub
 
 CMD /bin/bash
