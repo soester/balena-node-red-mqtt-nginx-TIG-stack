@@ -56,8 +56,12 @@ services:
     ports:
        - "1880:1880"
     depends_on:
-        - mqtt
+      - mqtt
     restart: always
+    labels:
+      io.resin.features.balena-socket: '1'
+      io.balena.features.supervisor-api: '1'
+      io.balena.features.balena-api: '1'
   node-red-test:
     build: node-red-test
     volumes:
@@ -67,6 +71,10 @@ services:
     depends_on:
         - mqtt-test
     restart: always
+    labels:
+      io.resin.features.balena-socket: '1'
+      io.balena.features.supervisor-api: '1'
+      io.balena.features.balena-api: '1'
   nginx:
     build : nginx
     depends_on:
@@ -87,7 +95,10 @@ services:
       - "4445:4445"
     labels:
       io.balena.features.dbus: '1'
-#    volumes:
+      io.balena.features.balena-socket: '1'
+      io.balena.features.kernel-modules: '1'
+    volumes:
+      - 'yoctopuce-data:/data'
 #      - /dev/bus/usb:/dev/bus/usb
 #      - /run/udev:/run/udev:ro
   sense-hat:
