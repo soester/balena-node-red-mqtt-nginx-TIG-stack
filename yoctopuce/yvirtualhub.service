@@ -4,7 +4,7 @@ Description=Yoctopuce VirtualHub
 [Service]
 EnvironmentFile=/etc/docker.env
 Type=simple
-ExecStart=/usr/sbin/VirtualHub
+ExecStart=/usr/sbin/VirtualHub -c /etc/vhub.byn
 Restart=always
 
 [Install]

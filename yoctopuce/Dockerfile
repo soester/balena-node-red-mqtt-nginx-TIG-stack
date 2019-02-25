@@ -37,19 +37,22 @@ RUN chmod +x /usr/sbin/VirtualHub
 
 # 7: set this service to be started at boot time with
 #CMD systemctl enable yvirtualhub.service
-#COPY ./start.sh /start.sh
-#RUN chmod +x /start.sh
-#CMD /start.sh
+
 
 
 COPY yvirtualhub.service /lib/systemd/system/
 RUN chmod +x /lib/systemd/system/yvirtualhub.service
-RUN systemctl daemon-reload
-RUN systemctl enable yvirtualhub
+#RUN systemctl daemon-reload
+#RUN systemctl enable yvirtualhub
 #RUN systemctl start yvirtualhub
 #RUN journalctl -f
 
-CMD /bin/bash
+
+COPY start.sh /usr/src/yocto/
+RUN chmod +x /start.sh
+#CMD /start.sh
+
+CMD ["bash", "/usr/src/yocto/start.sh"]
 
 
 ### https://github.com/phusion/baseimage-docker#inspecting
