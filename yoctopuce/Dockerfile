@@ -49,7 +49,7 @@ RUN chmod +x /lib/systemd/system/yvirtualhub.service
 
 
 COPY start.sh /usr/src/yocto/
-RUN chmod +x /start.sh
+RUN chmod +x /usr/src/yocto/start.sh
 #CMD /start.sh
 
 CMD ["bash", "/usr/src/yocto/start.sh"]
