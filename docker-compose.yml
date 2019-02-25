@@ -85,6 +85,8 @@ services:
     ports:
       - "4444:4444"
       - "4445:4445"
+    labels:
+      io.balena.features.dbus: '1'
 #    volumes:
 #      - /dev/bus/usb:/dev/bus/usb
 #      - /run/udev:/run/udev:ro
