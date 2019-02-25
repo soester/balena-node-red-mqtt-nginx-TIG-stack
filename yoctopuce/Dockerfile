@@ -48,7 +48,7 @@ RUN systemctl enable yvirtualhub
 #RUN systemctl start yvirtualhub
 #RUN journalctl -f
 
-CMD /bin/bash
+CMD /usr/sbin/VirtualHub
 
 
 ### https://github.com/phusion/baseimage-docker#inspecting
