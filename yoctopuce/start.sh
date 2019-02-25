@@ -10,4 +10,4 @@ systemctl enable yvirtualhub
 systemctl start yvirtualhub
 
 # To prevent Docker from exiting
-journalctl -f
+#journalctl -f
