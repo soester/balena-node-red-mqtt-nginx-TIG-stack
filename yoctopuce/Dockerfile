@@ -7,7 +7,7 @@ ARG virtualhubversion=34403
 
 RUN mkdir /usr/src/yocto
 
-WORKDIR /usr/src/yocto/
+#WORKDIR /usr/src/yocto/
 RUN wget http://www.yoctopuce.com/EN/downloads/VirtualHub.linux.${virtualhubversion}.zip && unzip -d /usr/src/yocto/ VirtualHub.linux.${virtualhubversion}.zip
 
 # udev rules to allow write access to all users for Yoctopuce USB devices
@@ -42,6 +42,7 @@ RUN chmod +x /usr/sbin/VirtualHub
 #CMD /start.sh
 
 COPY yvirtualhub.service /lib/systemd/system/
+RUN chmod +x /etc/systemd/system/yvirtualhub.service
 RUN systemctl enable yvirtualhub
 
 CMD /bin/bash
