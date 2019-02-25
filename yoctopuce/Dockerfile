@@ -5,10 +5,10 @@ ENV UDEV=1
 ENV INITSYSTEM=on
 ARG virtualhubversion=34403
 
-RUN mkdir -p /usr/src/yocto
+RUN mkdir /usr/src/yocto
 
 WORKDIR /usr/src/yocto/
-RUN wget http://www.yoctopuce.com/EN/downloads/VirtualHub.linux.${virtualhubversion}.zip && unzip -d /usr/src/yocto VirtualHub.linux.${virtualhubversion}.zip
+RUN wget http://www.yoctopuce.com/EN/downloads/VirtualHub.linux.${virtualhubversion}.zip && unzip -d /usr/src/yocto/ VirtualHub.linux.${virtualhubversion}.zip
 
 # udev rules to allow write access to all users for Yoctopuce USB devices
 RUN cp /usr/src/yocto/udev_conf/51-yoctopuce_all.rules /etc/udev/rules.d
