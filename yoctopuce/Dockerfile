@@ -44,11 +44,12 @@ RUN chmod +x /usr/sbin/VirtualHub
 
 COPY yvirtualhub.service /lib/systemd/system/
 RUN chmod +x /lib/systemd/system/yvirtualhub.service
+RUN systemctl daemon-reload
 RUN systemctl enable yvirtualhub
 #RUN systemctl start yvirtualhub
 #RUN journalctl -f
 
-CMD /usr/sbin/VirtualHub
+CMD /bin/bash
 
 
 ### https://github.com/phusion/baseimage-docker#inspecting
