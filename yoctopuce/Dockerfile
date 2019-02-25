@@ -46,7 +46,7 @@ COPY yvirtualhub.service /lib/systemd/system/
 RUN chmod +x /lib/systemd/system/yvirtualhub.service
 RUN systemctl enable yvirtualhub
 #RUN systemctl start yvirtualhub
-RUN journalctl -f
+#RUN journalctl -f
 
 CMD /bin/bash
 
