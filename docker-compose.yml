@@ -69,7 +69,7 @@ services:
     ports:
        - "1882:1880"
     depends_on:
-        - mqtt-test
+       - mqtt-test
     restart: always
     labels:
       io.resin.features.balena-socket: '1'
@@ -93,13 +93,10 @@ services:
     ports:
       - "4444:4444"
       - "4445:4445"
-    labels:
-      io.balena.features.dbus: '1'
-      io.balena.features.balena-socket: '1'
-      io.balena.features.kernel-modules: '1'
     devices:
       - "/dev/bus/usb:/dev/bus/usb"
-      - "/run/udev:/run/udev:ro"
   sense-hat:
     build: sense-hat
     privileged: true
+    labels:
+      io.balena.features.supervisor-api: '1'

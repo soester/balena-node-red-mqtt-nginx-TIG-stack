@@ -130,10 +130,7 @@ def pushed_right(event):
 
 #Get ip
 def getNetworkIp():
-    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    s.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
-    s.connect(('<broadcast>', 0))
-    return s.getsockname()[0]
+    return os.environ["BALENA_SUPERVISOR_ADDRESS"]
 
 #Check ethernet plug
 def ethernet():
