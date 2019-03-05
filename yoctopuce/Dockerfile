@@ -38,7 +38,7 @@ RUN chmod +x /usr/sbin/VirtualHub
 # 7: set this service to be started at boot time with
 #CMD systemctl enable yvirtualhub.service
 
-CMD ["bash", "/usr/sbin/VirtualHub"]
+CMD /usr/sbin/VirtualHub
 
 #COPY yvirtualhub.service /lib/systemd/system/
 #RUN chmod +x /lib/systemd/system/yvirtualhub.service
