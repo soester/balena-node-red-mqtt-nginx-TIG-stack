@@ -97,9 +97,8 @@ services:
       io.balena.features.dbus: '1'
       io.balena.features.balena-socket: '1'
       io.balena.features.kernel-modules: '1'
-    volumes:
-      - /dev/bus/usb:/dev/bus/usb
-      - /run/udev:/run/udev:ro
+#      - /dev/bus/usb:/dev/bus/usb
+#      - /run/udev:/run/udev:ro
   sense-hat:
     build: sense-hat
     privileged: true
