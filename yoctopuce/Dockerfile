@@ -1,9 +1,9 @@
 
 FROM balenalib/raspberrypi3-debian:latest
-RUN apt update && apt upgrade && apt -y install wget unzip libusb-1.0-0 portmap systemd
-ENV UDEV=1
-ENV INITSYSTEM=on
-ARG virtualhubversion=34403
+RUN apt update && apt upgrade && apt -y install wget unzip libusb-1.0-0
+#ENV UDEV=1
+#ENV INITSYSTEM=on
+ARG virtualhubversion=34498
 
 RUN mkdir /usr/src/yocto
 
@@ -11,7 +11,7 @@ RUN mkdir /usr/src/yocto
 RUN wget http://www.yoctopuce.com/EN/downloads/VirtualHub.linux.${virtualhubversion}.zip && unzip -d /usr/src/yocto/ VirtualHub.linux.${virtualhubversion}.zip
 
 # udev rules to allow write access to all users for Yoctopuce USB devices
-RUN cp /usr/src/yocto/udev_conf/51-yoctopuce_all.rules /etc/udev/rules.d
+##RUN cp /usr/src/yocto/udev_conf/51-yoctopuce_all.rules /etc/udev/rules.d
 # users
 # RUN groupadd virtualhub --gid 1012 && \ useradd -g virtualhub -r -s /sbin/nologin --uid 997 irtualhub
 
@@ -38,21 +38,21 @@ RUN chmod +x /usr/sbin/VirtualHub
 # 7: set this service to be started at boot time with
 #CMD systemctl enable yvirtualhub.service
 
+CMD ["bash", "/usr/sbin/VirtualHub"]
 
-
-COPY yvirtualhub.service /lib/systemd/system/
-RUN chmod +x /lib/systemd/system/yvirtualhub.service
+#COPY yvirtualhub.service /lib/systemd/system/
+#RUN chmod +x /lib/systemd/system/yvirtualhub.service
 #RUN systemctl daemon-reload
 #RUN systemctl enable yvirtualhub
 #RUN systemctl start yvirtualhub
 #RUN journalctl -f
 
 
-COPY start.sh /usr/src/yocto/
-RUN chmod +x /usr/src/yocto/start.sh
+#COPY start.sh /usr/src/yocto/
+#RUN chmod +x /usr/src/yocto/start.sh
 #CMD /start.sh
 
-CMD ["bash", "/usr/src/yocto/start.sh"]
+#CMD ["bash", "/usr/src/yocto/start.sh"]
 
 
 ### https://github.com/phusion/baseimage-docker#inspecting
